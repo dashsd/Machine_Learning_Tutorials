@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python3
 # coding: utf-8
 
 # # This is a Model-Based Machine Learning using Scikit-Learn
@@ -292,7 +292,7 @@ for country, pos_text in position_text.items():
     plt.plot(pos_data_x, pos_data_y, "ro")
     
 # save the plot as a figure
-save_fig('life_satisfaction_vs_gdp_scatterplot')
+# ('life_satisfaction_vs_gdp_scatterplot')
 
 # Display the plot
 plt.show()
@@ -339,7 +339,7 @@ plt.text(5*10**3, 3.5, r"$\theta_0 = 4$", fontsize=14, color="b")
 plt.text(5*10**3, 2.6, r"$\theta_1 = 5 \times 10^{-5}$", fontsize=14, color="b")
 
 # save the plot as a figure
-save_fig("tweaking_model_params_plot")
+# save_fig("tweaking_model_params_plot")
 
 plt.show()
 
@@ -412,7 +412,7 @@ plt.plot(X, intercept_+coeff_*X, "b")
 plt.text(5000, 3.1, r"$\theta_0 = 4.85$", fontsize=14, color="b")
 plt.text(5000, 2.2, r"$\theta_1 = 4.91 \times 10^{-5}$", fontsize=14, color="b")
 
-save_fig("best_fit_model_plot")
+# save_fig("best_fit_model_plot")
 
 plt.show()
 
@@ -465,7 +465,7 @@ plt.text(25000, 5.0, r"Prediction = 5.96", fontsize=14, color="b")
 
 plt.plot(cyprus_gdp_per_data, cyprus_predicted_life_satisfaction, "ro")
 
-save_fig('cyprus_prediction_plot')
+# save_fig('cyprus_prediction_plot')
 plt.show()
 
 
@@ -504,6 +504,11 @@ def get_sample_data():
 
 
 # Helper function to retrieve intercept and slope values
-def get_intercept_slope():
-    return intercept_, coeff_
+def get_intercept():
+    return intercept_
 
+def get_slope():
+    return coeff_
+
+def get_full_country_stats():
+    return full_country_stats
